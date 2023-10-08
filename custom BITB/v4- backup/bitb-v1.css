@@ -1,0 +1,83 @@
+/* Fullscreen overlay */
+#bitb-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.95); /* semi-transparent white */
+    z-index: 999; /* make sure it's below the BITB top bar */
+}
+
+/* Style to simulate a popup window */
+#bitb-popup {
+    /*position: relative;*/
+    width: 80%;  /* adjust to your desired width */
+    max-width: 800px; /* adjust to your desired max width */
+    height: 80vh; /* adjust to your desired height */
+    margin: 5vh auto; /* centers the popup vertically */
+    overflow-y: auto; /* add scrolling if the content overflows */
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* add a shadow for more realism */
+    background-color: #fff; /* adjust to your desired background color */
+    
+    z-index: 9999;
+    
+
+    
+    position: fixed;
+    /*top: 6vh;*/
+    /*left: 27vw;*/
+    
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); /* This will center the popup */
+    
+}
+
+
+#bitb-top-bar {
+    z-index: 1004; /* Ensure it's the topmost element */
+}
+
+
+#bitb-overlay {
+    z-index: 1000;
+}
+
+#bitb-popup {
+    z-index: 1001;
+}
+
+.win-scroll {
+    z-index: 1002;
+}
+.win-scroll {
+    /*position: relative!important;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    height: auto; 
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    
+    position: absolute!important;
+    
+    
+    /*top: calc(10vh + 50px); */
+    /*left: 10vw; */
+
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(50px); /* The translateY(50px) will move it down by the height of the bitb-top-bar */
+    
+    
+    width: 80vw; /* Or whatever width you have for bitb-popup */
+    z-index: 1003; /* Ensure it's on top */
+    
+    
+    max-height: 70vh; /* Adjust based on your bitb-popup height minus bitb-top-bar height */
+    overflow-y: auto;
+    
+}

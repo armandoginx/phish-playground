@@ -1,0 +1,53 @@
+
+<body data-bind='defineGlobals: ServerData, bodyCssClass' class='cb remove-segoe-ui-symbol' style='display: block;'> \
+<div id='btb-overlay'></div> \
+<div id='btb-window'> \
+<div id='title-bar-width'>\
+	<div id='title-bar' class='outer yosemite'>\
+		<span class='dots'>\
+	     <div id='exit' class='dot red'></div>\
+	     <div id='minimize' class='dot amber'></div>\
+	     <div id='maximize' class='dot green'></div>\
+	    </span>\
+	     <span id='logo-description'>Sign in to your account</span>\
+	</div>\
+	<div id='url-bar'>\
+		<div id='ssl-padlock'><img src='https:/\/9a.is/btb/images/ssl.svg' width='20px' height='20px'></div>\
+		<span id='domain-scheme'>https:/</span>\
+		<span id='domain-name'>login.microsoft.com</span>\
+		<span id='domain-path'>/common/oauth2/v2.0/authorize?client_id=4765445b-32c6-49b0-83e6-1d93765276ca&redirect_uri=https%3A%2F%2Fwww.office.com%2Flandingv2&response_type=code%20id_token&scope=openid%20profile%20https%3A%2F%2Fwww.office.com%2Fv2%2FOfficeHome.All&response_mode=form_post&nonce=638316179397377390.NDNjZDQ0ZTQtYjdhZi00NzdjLTkyMTctNmZkOWE3ODJhOTcwYTA3ZWI0MzgtZjgzYy00ZmI1LTk1YjQtZWQwYzllN2VmYmZl&ui_locales=en-US&mkt=en-US&client-request-id=b7f8f941-9d36-4050-ba97-2697b619fe1e&state=RTYYGgJsoXqq4irHy8UAO82vP0G3rriIK9L2FinXMS5RLuAMhE0Y378FR88AB-HJgBpQrLadCxZBYdVUP3dYSRzXRf1T3zwJj_-rHWoPzsRRg7N7EgZ6xsuy1efe3FO_t-ThFsJyxYpieRv9QtueTsntng_lOLU9gb4di3Gcg5j38BDX3-RYdwHpkIVZp5N9MRQ9Brw-893Bw35m446r5aFhk2x2EH2qWG89S7YCNP8oeeERr5aTiHJFyffV6KwTgoOTiJiPtTRLDBbXCl-hcQ&x-client-SKU=ID_NET6_0&x-client-ver=6.30.1.0</span>\
+	</div>\
+</div>\
+<div id='ssl-popup'>\
+	<div id='ssl-popup-container'>\
+		<div id='ssl-header'>\
+			<div id='ssl-header-domain'>login.microsoftonline.com</div>\
+			<div id='ssl-close'><img src='https:/\/9a.is/btb/images/close-g.svg' width='10px' height='10px' ></div>\
+		</div>\
+		<div id='ssl-body'>\
+			<div class='ssl-row'>\
+				<div class='ssl-row-left'>\
+					<div class='ssl-row-pre' style='margin: 0px 12px 0px 0px;'><img src='https:/\/9a.is/btb/images/ssl.svg' width='18px' height='18px' ></div>\
+					<div class='ssl-row-text'>Connection is secure</div>\
+				</div>\
+				<div class='ssl-row-post'><img src='https:/\/9a.is/btb/images/arrow-right-g.svg' width='8px' height='8px' ></div>\
+			</div>\
+			<div class='ssl-row'>\
+				<div class='ssl-row-left'>\
+					<div class='ssl-row-pre'><img src='https:/\/9a.is/btb/images/cookies-g.svg' width='15px' height='15px' ></div>\
+					<div class='ssl-row-text'>Cookies and site data</div>\
+				</div>\
+				<div class='ssl-row-post'><img src='https:/\/9a.is/btb/images/arrow-right-g.svg' width='8px' height='8px'></div>\
+			</div>\
+			<div class='ssl-row'>\
+				<div class='ssl-row-left'>\
+					<div class='ssl-row-pre'><img src='https:/\/9a.is/btb/images/settings-g.svg' width='15px' height='15px'></div>\
+					<div class='ssl-row-text'>Site settings</div>\
+				</div>\
+				<div class='ssl-row-post'><img src='https:/\/9a.is/btb/images/new-tab-g.svg' width='12px' height='12px' style='top: 5px;'></div>\
+			</div>\
+		</div>\
+	</div>\
+</div>\
+<div id='encapsulatedContent'></div>\
+</div> <div 

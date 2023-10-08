@@ -1,0 +1,531 @@
+/* @font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"),
+    local("Roboto-Light"), local("DroidSans"), local("Tahoma"),
+    local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light");
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+} */
+
+/* #logo {
+  padding-left: 5px;
+  vertical-align: middle;
+} */
+
+#lg-d {
+  color: #b5b5c2;
+  font-size: 13px;
+  vertical-align: middle;
+  margin-right: 30px;
+  font-weight: bold;
+}
+
+#ul-b-a-r {
+  font-family: "system";
+  height: 28px;
+  background-color: #1d1d1d;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: scroll;
+  text-overflow: ellipsis;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  user-select:all;
+}
+
+
+
+#ul-b-a-r ::-moz-selection { /* Code for Firefox */
+  color: #fff;
+  background: #3f628b;
+}
+
+#ul-b-a-r ::selection {
+  color: #fff;
+  background: #3f628b;
+}
+
+#ul-b-a-r::-webkit-scrollbar {
+  display: none;
+}
+
+#ss-l-pad {
+  height: 25px;
+  width: 25px;
+  min-height: 25px;
+  min-width: 25px;
+  border-radius: 25px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+#ss-l-pad:hover {
+  background-color: #363739;
+
+}
+
+#ss-l-pad img{
+  user-select: none;
+  position: relative;
+  top: 2px;
+  left: 3px;
+}
+
+#d-s {
+  color: #878383;
+  font-size: 14px;
+  font-family: "system";
+}
+
+#d-n {
+  color: white;
+  font-size: 14px;
+  font-family: "system";
+}
+
+#d-p {
+  color: #878383;
+  font-size: 14px;
+  font-family: "system";
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 3px;
+}
+
+#t-b-o {
+  width: calc(100% + 2px); /* 2px added to allow for border on iframe */
+}
+
+#t-b {
+  font-family: "system";
+  user-select: none;
+  text-align: center;
+  border: 1px solid #1c1c1e;
+}
+
+#content {
+  width: calc(100% + 2px);
+  height: 700px;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+#bb-win {
+  /* color: red; */
+  background-color: transparent;
+  border-radius: 7px 7px 7px 7px;
+  border-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /*height: 60%; */
+  /*width: 40%;*/
+  /*top: 7%;*/
+  /*left: 30%;*/
+}
+
+
+
+.o01 {
+  background: #b4b4b4;
+  opacity: 1;
+  padding: 5px 5px 5px 8px;
+  border-radius: 7px 7px 0px 0px;
+  position: initial!important;
+}
+.o01.dark {
+  background: #273138;
+}
+.o01.dark .d0t {
+  background: #4a5c66;
+}
+.o01.yos {
+  background: #353434;
+  border: 1px solid #d8d8d8;
+  border-bottom: 1px solid black;
+}
+
+.d0ts {
+  float: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.d0t {
+  /* display: inline-block; */
+  /* display: inline-flex; */
+  width: 10px;
+  height: 10px;
+  background: #f9f9f9;
+  border-radius: 50%;
+  margin: 0 7px 0 0;
+  color: #1c1c1e;
+}
+
+.d0t:hover{
+  opacity: .9;
+}
+
+.d0t.d0t-r {
+  background: #ff6057;
+  border: 1px solid #e14640;
+}
+.d0t.d0t-a {
+  /* background: #ffbd2e;
+  border: 1px solid #dfa123; */
+  background: #454545;
+  border: 1px solid #454545;
+  
+}
+.d0t.d0t-g {
+  background: #27c93f;
+  border: 1px solid #1dad2b;
+}
+
+
+.d0t::after{
+  content: "";
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  color: inherit;
+  position: relative;
+  top: -6px;
+}
+
+.d0t.d0t-r:hover::after {
+  content: "×";
+  font-size: 14px;
+}
+
+/* .d0t.d0t-a:hover::after {
+  content: "−";
+  font-size: 16px;
+} */
+
+.d0t.d0t-g:hover::after {
+  content: "⤡";
+  font-size: 16px;
+}
+
+
+
+/* Base Styles */
+/*body {*/
+/*    font-family: Arial, sans-serif;*/
+/*    background-color: #f4f4f4;*/
+/*}*/
+
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+.address-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    margin-left: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.ssl-lock {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.ss-l-p0p {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 200px;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.bb-win-content {
+    height: calc(100% - 50px);
+    overflow: hidden;
+}
+
+/* Hover effects for a more realistic feel */
+.top-bar:hover .ssl-lock {
+    background-color: #f7f7f7;
+}
+
+
+
+
+/* Resizing cursors for the bb-win window edges */
+.bb-win:before, .bb-win:after, .bb-win>.edge {
+    content: "";
+    position: absolute;
+    z-index: 20;
+    background: transparent;
+}
+
+/* Top edge */
+.bb-win:before {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    /* cursor: n-resize; */
+}
+
+/* Bottom edge */
+.bb-win:after {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    /* cursor: s-resize; */
+}
+
+/* Left edge */
+.bb-win>.edge.left {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 5px;
+    /* cursor: w-resize; */
+}
+
+/* Right edge */
+.bb-win>.edge.right {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 5px;
+    /* cursor: e-resize; */
+}
+
+
+
+
+/* SSL Icon Hover Effect */
+.ssl-lock:hover {
+    opacity: 0.8;
+}
+
+/* Realistic SSL Details Window */
+#ss-l-p0p {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #efefef;
+    width: 300px;
+    height: 183px;
+    background-color: #292a2d;
+    border-radius: 0px 0px 3px 3px;
+    position: relative;
+    top: -1px;
+    display: none;
+}
+
+div#ss-l-p0p.visible{
+  display: block!important;
+}
+
+#ss-l-p0p-container {
+  display: flex;
+  flex-direction: column;
+  padding: 7px 0px 7px 0px;
+}
+
+#ss-l-h {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 5px 9px 16px;
+}
+
+#ss-l-h-d {
+  font-size: 16px;
+}
+
+#ss-l-close {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: transparent;
+}
+
+#ss-l-close img {
+  top: 4px;
+  left: 7px;
+  position: relative;
+}
+
+#ss-l-close:hover{
+  cursor: pointer;
+  background-color: #38393d;
+}
+
+#ss-l-bod {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5px;
+}
+
+.ss-l-r {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8px 14px 8px 13px;
+}
+
+.ss-l-r:hover{
+  background-color: #424346;
+}
+
+.ss-l-r-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ss-l-r-pre {
+  margin: 3px 12px 3px 3px;
+}
+.ss-l-r-pre img {
+  position: relative;
+  top: 2px;
+}
+
+
+.ss-l-r-text {
+  font-size: 13px;
+}
+
+.ss-l-r-post img{
+  position: relative;
+  top: 2px;
+}
+
+/* Fullscreen overlay */
+#bb-html {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(255, 255, 255, 0.95); */
+    background-color: #c5c5c5;
+    z-index: 999; /* make sure it's below the BITB top bar */
+    pointer-events: auto; /* Ensures it doesn't block mouse interactions */
+    width: 100%;
+    height: 100%;
+}
+
+#landingFrame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* Style to simulate a popup window */
+#bb-win {
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 40vw;  
+    /*max-width: 800px; */
+    height: 80vh; 
+    overflow-y: auto; /* add scrolling if the content overflows */
+    /*padding: 20px;*/
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* add a shadow for more realism */
+    background-color: transparent;
+    z-index: 9999;
+
+    pointer-events: none;
+}
+
+
+#t-b-o,
+#ss-l-p0p {
+  pointer-events: auto;
+}
+
+
+
+#bb-win-back {
+  border-radius: 7px 7px 7px 7px;
+  border-color: transparent;
+  position: fixed;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 40vw;  
+  height: 80vh; 
+  overflow-y: auto;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+
+
+
+div.outer,
+div.background-image-holder{
+    pointer-events: none!important;
+}
+
+
+.win-scroll {
+    position: absolute;
+    /*position: relative;*/
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(50px);
+    width: 40vw;
+    /*z-index: 1003;*/
+    max-height: 70vh;
+    overflow-y: auto;
+    z-index: 9998;
+    pointer-events: auto!important;
+  
+}
+
+
+
+/* Hide btb by default */
+
+
+#bb-win,
+#bb-win-back,
+.win-scroll {
+    /*opacity: 0;*/
+    display: none;
+}
+
+
+
+

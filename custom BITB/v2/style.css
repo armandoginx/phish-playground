@@ -1,0 +1,618 @@
+
+
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"),
+    local("Roboto-Light"), local("DroidSans"), local("Tahoma"),
+    local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light");
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#logo {
+  padding-left: 5px;
+  vertical-align: middle;
+}
+
+#bwLogoDesc {
+  color: #b5b5c2;
+  font-size: 13px;
+  vertical-align: middle;
+  margin-right: 30px;
+  font-weight: bold;
+}
+
+#bwURL {
+  font-family: "system";
+  height: 28px;
+  background-color: #e9e9e9;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: scroll;
+  text-overflow: ellipsis;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#url-bar::-webkit-scrollbar {
+  display: none;
+}
+
+#bwSSLLock {
+  user-select: none;
+  padding-left: 8px;
+  margin-right: 8px;
+}
+
+#bwDomainName {
+  color: #333;
+  font-size: 14px;
+  font-family: "system";
+}
+
+#bwDomainPath {
+  color: #878383;
+  font-size: 14px;
+  font-family: "system";
+}
+
+#bwTitleWidth {
+  width: calc(100% + 2px);
+}
+
+#bwTitle {
+  font-family: "system";
+  user-select: none;
+  text-align: center;
+  border: 1px solid #d8d8d8;
+  background-color: #f2f2f2;
+}
+
+#bwContent {
+  width: calc(100% + 2px);
+  height: 700px;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+#bwWin {
+  color: red;
+  background-color: transparent;
+  border-radius: 7px 7px 7px 7px;
+  border-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 759px;
+  width: 40%;
+  max-width: 1200px;
+}
+
+.bwOuter {
+  background: #f2f2f2;
+  opacity: 0.9;
+  padding: 5px 5px 5px 8px;
+  border-radius: 7px 7px 0px 0px;
+}
+
+.outer.dark {
+  background: #273138;
+}
+
+.outer.dark .bwDot {
+  background: #4a5c66;
+}
+
+.outer.yosemite {
+  background: #f2f2f2;
+  border: 1px solid #d8d8d8;
+  border-bottom: 1px solid #b4b4b4;
+}
+
+.bwDots {
+  float: left;
+}
+
+.bwDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #f9f9f9;
+  border-radius: 50%;
+  margin: 0 4px 0 0;
+  transition: background-color 0.3s;
+}
+
+.dot.red {
+  background: #ff6057;
+  border: 1px solid #e14640;
+}
+
+.dot.red:hover {
+  background: #e14640;
+}
+
+.dot.amber {
+  background: #ffbd2e;
+  border: 1px solid #dfa123;
+}
+
+.dot.amber:hover {
+  background: #dfa123;
+}
+
+.dot.green {
+  background: #27c93f;
+  border: 1px solid #1dad2b;
+}
+
+.dot.green:hover {
+  background: #1dad2b;
+}
+
+
+
+/* Hover styles for the close, minimize, bwMax buttons */
+.dot.red:hover::before {
+  content: "×";
+  position: relative;
+  top: -2px;
+  left: -4px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.dot.amber:hover::before {
+  content: "−";
+  position: relative;
+  top: -1px;
+  left: -4px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.dot.green:hover::before {
+  content: "□";
+  position: relative;
+  top: -1px;
+  left: -4px;
+  font-size: 11px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.dot:hover {
+  cursor: pointer;
+}
+
+/* Dark mode styles based on theme detection */
+@media (prefers-color-scheme: dark) {
+  #bwURL {
+    background-color: #1d1d1d;
+  }
+
+  #bwTitle {
+    background-color: #2a2a2a;
+    border: 1px solid #1c1c1e;
+  }
+
+  #bwDomainName {
+    color: white;
+  }
+
+  .outer.yosemite {
+    background: #1c1c1e;
+    border: 1px solid #d8d8d8;
+    border-bottom: 1px solid black;
+  }
+}
+
+/* Styles for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  #bwWin {
+    width: 90%;
+    height: auto;
+    max-width: none;
+  }
+
+  #bwContent {
+    height: 500px;
+  }
+}
+
+/* Styles for SSL padlock hover */
+#ssl-padlock:hover {
+  cursor: pointer;
+}
+
+#ssl-padlock:hover::after {
+  content: "Connection is secure";
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  background-color: white;
+  padding: 5px 10px;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 10;
+}
+
+
+
+.bwDot.red::before {
+  content: "×";
+  position: relative;
+  top: -2px;
+  left: -4px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+  display: none;  # Hide by default and only show on hover
+}
+
+.bwDot.amber::before {
+  content: "−";
+  position: relative;
+  top: -1px;
+  left: -4px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+  display: none;  # Hide by default and only show on hover
+}
+
+.bwDot.green::before {
+  content: "□";
+  position: relative;
+  top: -1px;
+  left: -4px;
+  font-size: 11px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+  display: none;  # Hide by default and only show on hover
+}
+
+.bwDot:hover::before {
+  display: inline;
+}
+
+.bwDot {
+  cursor: pointer;
+}
+
+
+
+.bwSSLLock:hover::after {
+  content: "Connection is secure";
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  background-color: white;
+  padding: 5px 10px;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 10;
+  display: block;
+}
+
+
+
+/* Adjusting the tooltip to display on hover */
+.bwSSLLock::after {
+  content: "Connection is secure";
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  background-color: white;
+  padding: 5px 10px;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 10;
+  display: none;  # Hide by default
+}
+
+.bwSSLLock:hover::after {
+  display: block;
+}
+
+/* Adjusting the position of the SSL modal */
+#bwSSLLockModal {
+  position: absolute;
+  top: 40px;
+  left: 5px;
+  width: 280px;
+  height: auto;
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  z-index: 1000;
+  padding: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.bwDot.red:hover::before {
+  color: #f44336;
+}
+
+.bwDot.amber:hover::before {
+  color: #ffeb3b;
+}
+
+.bwDot.green:hover::before {
+  color: #4caf50;
+}
+
+
+
+#bwSSLLockModal {
+    width: 220px;
+    padding: 8px;
+    font-size: 12px;
+}
+
+#bwSSLLockModal h2, #bwSSLLockModal h3 {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+#bwSSLLockModal p {
+    margin: 4px 0;
+}
+
+
+
+.bwDot.red {
+    background-color: #f44336;
+}
+
+.bwDot.amber {
+    background-color: #ffeb3b;
+}
+
+.bwDot.green {
+    background-color: #4caf50;
+}
+
+.bwDot:hover::before {
+    top: 0;
+    left: 0;
+}
+
+
+
+/* Adjusting the button icon colors */
+.bwDot.red::before, .bwDot.amber::before, .bwDot.green::before {
+    color: var(--font-color);
+}
+
+.bwDot:hover::before {
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+
+
+/* Adjusting the SSL popup */
+#bwSSLLockModal {
+    font-size: 10px;
+    border: none;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+#bwSSLLockModal h2, #bwSSLLockModal h3 {
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+/* SSL lock icon hover effect */
+.bwSSLLock:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+
+
+/* Adjusting the minimize button hover movement */
+.bwDot.amber:hover::before {
+    top: 0;
+}
+
+/* Correcting the maximize icon for macOS */
+.bwDot.green::before {
+    content: "⛶";  /* Diagonal 2-arrow icon */
+    font-size: 10px;
+}
+
+/* Adjusting the button icon colors based on theme */
+.bwDot::before {
+    color: var(--icon-color);
+}
+
+
+
+/* Adjusting the SSL popup style to be more compact and realistic */
+#bwSSLLockModal {
+    width: 200px;
+    padding: 6px;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+#bwSSLLockModal h2 {
+    font-size: 11px;
+    margin: 6px 0;
+}
+
+#bwSSLLockModal h3 {
+    font-size: 10px;
+    margin: 6px 0;
+}
+
+#bwSSLLockModal p {
+    margin: 3px 0;
+    font-size: 9px;
+}
+
+/* Adjusting the SSL lock icon hover effect */
+.bwSSLLock:hover {
+    background-color: var(--hover-bg-color);
+}
+
+
+
+/* Correcting the button icon colors for better visibility */
+.bwDot::before {
+    color: var(--highlight-color);
+}
+
+/* Fixing the hover movement for minimize button */
+.bwDot.amber:hover::before {
+    top: 0;
+    left: 0;
+}
+
+/* Updating the maximize button icon for Mac windows */
+.bwDot.green::before {
+    content: "⛶";  # Diagonal 2-arrow icon for Mac windows
+    font-size: 10px;
+    position: relative;
+    top: -1px;
+    left: -3px;
+}
+
+
+
+/* Adjusting the dimensions and styles of the SSL popup */
+#bwSSLLockModal {
+    width: 200px;
+    padding: 5px;
+    background-color: #f5f5f5;  # Adjusting the background color for realism
+}
+
+#bwSSLLockModal p {
+    margin: 2px 0;
+    color: #333;  # Adjusting the text color for realism
+}
+
+/* Implementing the hover effect for the SSL lock icon */
+.bwSSLLock:hover {
+    background-color: rgba(0, 0, 0, 0.05);  # Lighter background color on hover
+    border-radius: 50%;
+}
+
+
+
+/* Adjusting the SSL popup to match Mac browser style */
+#bwSSLLockModal {
+    width: 180px;
+    height: auto;
+    background-color: #2c2c2c;  /* Dark grey background */
+    color: #e0e0e0;  /* Light grey text color for better visibility */
+    font-size: 10px;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#bwSSLLockModal h2 {
+    font-size: 12px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+#bwSSLLockModal p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+#bwSSLLockModal p:hover {
+    background-color: #3a3a3a;  /* Slightly lighter grey for hover effect */
+}
+
+
+
+/* Ensuring circle buttons do not move at all on hover */
+.bwDot {
+    position: relative;
+}
+
+.bwDot::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--highlight-color);  /* Adjusting icon colors based on theme */
+}
+
+
+/* Adjusting the SSL popup to closely match Mac browser style */
+#bwSSLLockModal {
+    width: 180px;
+    height: auto;
+    background-color: #2c2c2c;  /* Dark grey background */
+    color: #e0e0e0;  /* Light grey text color */
+    font-size: 10px;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+#bwSSLLockModal h2 {
+    font-size: 12px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+#bwSSLLockModal p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+#bwSSLLockModal p:hover {
+    background-color: #3a3a3a;  /* Slightly lighter grey for hover effect */
+}
+
+/* Ensuring circle buttons do not move at all on hover */
+.bwDot {
+    position: relative;
+}
+
+.bwDot::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--highlight-color);  /* Adjusting icon colors based on theme */
+}
